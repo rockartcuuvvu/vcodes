@@ -146,7 +146,7 @@ module.exports = async (client) => {
                     dynamic: true
                 })).setThumbnail(a.avatarURL({
                     dynamic: true
-                })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://vcodes.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yapmaya çalıştı fakat siteden engellendiği için giriş yapamadı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+                })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://bot-list-1.blockbotlistt.repl.co/user/${a.id}) isimli kullanıcı **siteye** giriş yapmaya çalıştı fakat siteden engellendiği için giriş yapamadı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
             })
             req.session.destroy(() => {
                 res.json({
@@ -176,7 +176,7 @@ module.exports = async (client) => {
                     dynamic: true
                 })).setThumbnail(a.avatarURL({
                     dynamic: true
-                })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://vcodes.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+                })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://bot-list-1.blockbotlistt.repl.co/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
 
             })
         }
