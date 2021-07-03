@@ -238,14 +238,14 @@ module.exports = async (client) => {
     });
     app.get("/robots.txt", function(req, res) {
         res.set('Content-Type', 'text/plain');
-        res.send(`Sitemap: https://vcodes.xyz/sitemap.xml`);
+        res.send(`Sitemap: https://bot-list-1.blockbotlistt.repl.co/sitemap.xml`);
     });
 
     app.get("/sitemap.xml", async function(req, res) {
-        let link = "<url><loc>https://vcodes.xyz/</loc></url>";
+        let link = "<url><loc>https://bot-list-1.blockbotlistt.repl.co/</loc></url>";
         let botdataforxml = await botsdata.find()
         botdataforxml.forEach(bot => {
-            link += "\n<url><loc>https://vcodes.xyz/bot/" + bot.botID + "</loc></url>";
+            link += "\n<url><loc>https://bot-list-1.blockbotlistt.repl.co/bot/" + bot.botID + "</loc></url>";
         })
         res.set('Content-Type', 'text/xml');
         res.send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">${link}</urlset>`);
@@ -1042,8 +1042,8 @@ module.exports = async (client) => {
         }
         client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
             .setTitle("New code added!").setColor("GREEN").setFooter(config.footer)
-            .setDescription(`The user named **[${req.user.username}](https://vcodes.xyz/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
-            .addField("Code Link", `https://vcodes.xyz/code/${kod}`, true)
+            .setDescription(`The user named **[${req.user.username}](https://bot-list-1.blockbotlistt.repl.co/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
+            .addField("Code Link", `https://bot-list-1.blockbotlistt.repl.co/code/${kod}`, true)
             .addField("Code Description", rBody['codedesc'], true)
             .addField("Code Category", rBody['category'], true)
         )
@@ -1080,8 +1080,8 @@ module.exports = async (client) => {
         }, function(err, docs) {})
         client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
             .setTitle("Code edited!").setColor("GREEN").setFooter(config.footer)
-            .setDescription(`The user named **[${req.user.username}](https://vcodes.xyz/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
-            .addField("Code Link", `https://vcodes.xyz/code/${kod}`, true)
+            .setDescription(`The user named **[${req.user.username}](https://bot-list-1.blockbotlistt.repl.co/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
+            .addField("Code Link", `https://bot-list-1.blockbotlistt.repl.co/code/${kod}`, true)
             .addField("Code Description", rBody['codedesc'], true)
             .addField("Code Category", rBody['category'], true)
         )
