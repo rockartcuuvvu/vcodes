@@ -207,10 +207,10 @@ module.exports = async (client) => {
         });
     });
     app.get("/dc", (req, res) => {
-        res.redirect('https://discord.gg/z7dBzygse4');
+        res.redirect('https://discord.gg/VYaCtqvSJv');
     });
     app.get("/discord", (req, res) => {
-        res.redirect('https://discord.gg/z7dBzygse4');
+        res.redirect('https://discord.gg/VYaCtqvSJv');
     });
     app.get("/error", (req, res) => {
         renderTemplate(res, req, "pages/error.ejs", {
